@@ -259,6 +259,7 @@ function renderFilters() {
       button.textContent = "Všetko";
     } else if (key === WOMEN) {
       button.textContent = `♀ Pre ženy (${womenCount})`;
+      button.classList.add("chip-women");
     } else {
       const count = stores.filter((s) => s.categories.includes(key)).length;
       button.append(icon(key), el("span", "", `${CATEGORIES[key].label} (${count})`));

@@ -13,6 +13,10 @@
       <h1>Reps zoznam</h1>
       <p class="subtitle">Yupoo obchody na jednom mieste. Hľadaj podľa obchodu, typu oblečenia alebo značky.</p>
 
+    </header>
+
+    <!-- Vyhľadávanie a filtre ostávajú pri scrollovaní hore (sticky) -->
+    <div class="toolbar">
       <input
         id="search"
         class="search"
@@ -20,10 +24,10 @@
         placeholder="Hľadaj… napr. mikiny, Nike, Peng"
         autocomplete="off"
       >
-
       <div id="filters" class="filters" aria-label="Filtrovať podľa typu oblečenia"></div>
-      <p id="count" class="count"></p>
-    </header>
+    </div>
+
+    <p id="count" class="count"></p>
 
     <main id="stores" class="list"></main>
 

@@ -1,5 +1,4 @@
 # Reps zoznam
-   **👉 Stránka: https://w1ttyy.github.io/cina/**
 
 **👉 Stránka: https://w1ttyy.github.io/cina/**
 
