@@ -1,5 +1,7 @@
 # Reps zoznam
 
+**👉 Stránka: https://w1ttyy.github.io/cina/**
+
 Zoznam Yupoo obchodov s oblečením. Stránka beží na GitHub Pages a všetky dáta sú v súbore [`stores.json`](stores.json).
 
 ## Ako pridať alebo upraviť obchod
@@ -34,6 +36,9 @@ Zoznam Yupoo obchodov s oblečením. Stránka beží na GitHub Pages a všetky d
 | `sections` | Priame linky na sekcie v obchode, napr. len mikiny (voliteľné) |
 | `note` | Krátka poznámka (voliteľné) |
 | `locked` | `true`, ak je katalóg zaheslovaný |
+| `women` | Čo majú pre ženy. Zobrazí sa ako riadok „Pre ženy“ a obchod sa ukáže vo filtri ♀ Pre ženy |
+| `password` | Heslo ku katalógu. Zobrazí sa pri obchode s tlačidlom Kopírovať |
+| `pinned` | `true` = obchod je navrchu so ⭐. Pripnuté obchody idú v poradí, v akom sú v súbore |
 
 Prázdne polia nechaj ako `[]` alebo `""`.
 

@@ -39,6 +39,7 @@ const CATEGORIES = {
 };
 
 const ALL = "all";
+const WOMEN = "women"; // špeciálny filter "Pre ženy"
 const VISIBLE_BRANDS = 10;
 
 const storesEl = document.querySelector("#stores");
@@ -73,13 +74,41 @@ function createLink(url, text, className) {
   return a;
 }
 
+
 function formatAlbums(count) {
   if (!count) return "";
   return count.toLocaleString("sk-SK") + " albumov";
 }
 
+function getDomain(url) {
+  try {
+    return new URL(url).hostname;
+  } catch {
+    return url;
+  }
+}
+
+// Jeden riadok tagov: vľavo popis ("Oblečenie"), vpravo samotné tagy
+function tagLine(label, content) {
+  const line = el("div", "tag-line");
+  line.append(el("span", "tag-label", label), content);
+  return line;
+}
+
+function createTypes(store) {
+  const wrap = el("div", "tags");
+  for (const key of store.categories) {
+    if (!CATEGORIES[key]) continue;
+    const type = el("span", "type");
+    type.append(icon(key), el("span", "", CATEGORIES[key].label));
+    wrap.append(type);
+  }
+  if (!wrap.children.length) wrap.append(el("span", "empty", "zatiaľ nevieme"));
+  return wrap;
+}
+
 function createBrands(store) {
-  const wrap = el("div", "brands");
+  const wrap = el("div", "tags");
   const brands = store.brands || [];
 
   brands.forEach((brand, index) => {
@@ -110,44 +139,59 @@ function createBrands(store) {
   return wrap;
 }
 
-function createCard(store) {
-  const card = el("article", store.locked ? "card locked" : "card");
-
-  const head = el("div", "card-head");
-  head.append(el("h2", "", store.name));
-  if (store.locked) head.append(el("span", "badge", "🔒 heslo"));
-  else if (store.albums) head.append(el("span", "badge", formatAlbums(store.albums)));
-  card.append(head);
-
-  if (store.categories.length > 0) {
-    const types = el("div", "types");
-    for (const key of store.categories) {
-      if (!CATEGORIES[key]) continue;
-      const type = el("span", "type");
-      type.title = CATEGORIES[key].label;
-      type.append(icon(key), el("span", "type-label", CATEGORIES[key].label));
-      types.append(type);
+function createPassword(password) {
+  const wrap = el("div", "password");
+  const code = el("code", "", password);
+  const button = el("button", "copy-btn", "Kopírovať");
+  button.type = "button";
+  button.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(password);
+      button.textContent = "Skopírované ✓";
+    } catch {
+      // Schránka nefunguje napr. na http:// – aspoň označíme text
+      getSelection().selectAllChildren(code);
+      button.textContent = "Ctrl+C";
     }
-    card.append(types);
-  }
+    setTimeout(() => (button.textContent = "Kopírovať"), 1500);
+  });
+  wrap.append("🔒 Heslo:", code, button);
+  return wrap;
+}
 
+function createRow(store) {
+  const row = el("article", "row");
+  if (store.pinned) row.classList.add("pinned");
+
+  // Ľavý stĺpec: názov, info, poznámka, heslo
+  const main = el("div", "row-main");
+  main.append(el("h2", "", store.name));
+  const meta = [formatAlbums(store.albums), getDomain(store.url)].filter(Boolean);
+  main.append(el("p", "meta", meta.join(" · ")));
+  if (store.note) main.append(el("p", "note", store.note));
+  if (store.password) main.append(createPassword(store.password));
+
+  // Stredný stĺpec: hore oblečenie, dole značky, potom sekcie
+  const tags = el("div", "row-tags");
+  tags.append(tagLine("Oblečenie", createTypes(store)));
+  if (store.women) {
+    tags.append(tagLine("Pre ženy", el("span", "women", "♀ " + store.women)));
+  }
   if (store.brands && store.brands.length > 0) {
-    card.append(createBrands(store));
+    tags.append(tagLine("Značky", createBrands(store)));
   }
-
-  if (store.note) card.append(el("p", "note", store.note));
-
   if (store.sections && store.sections.length > 0) {
-    const sections = el("div", "sections");
-    sections.append(el("span", "sections-title", "Priamo do sekcie:"));
-    for (const section of store.sections) {
-      sections.append(createLink(section.url, section.label));
-    }
-    card.append(sections);
+    const links = el("div", "sections");
+    for (const section of store.sections) links.append(createLink(section.url, section.label));
+    tags.append(tagLine("Sekcie", links));
   }
 
-  card.append(createLink(store.url, "Otvoriť obchod", "open-btn"));
-  return card;
+  // Pravý stĺpec: tlačidlo
+  const action = el("div", "row-action");
+  action.append(createLink(store.url, "Otvoriť →", "open-btn"));
+
+  row.append(main, tags, action);
+  return row;
 }
 
 function matchesSearch(store, query) {
@@ -157,6 +201,7 @@ function matchesSearch(store, query) {
     store.name,
     store.url,
     store.note || "",
+    store.women ? store.women + " ženy dámske damske" : "",
     ...store.categories,
     ...labels,
     ...(store.brands || []),
@@ -168,7 +213,17 @@ function matchesSearch(store, query) {
 }
 
 function matchesCategory(store) {
-  return activeCategory === ALL || store.categories.includes(activeCategory);
+  if (activeCategory === ALL) return true;
+  if (activeCategory === WOMEN) return Boolean(store.women);
+  return store.categories.includes(activeCategory);
+}
+
+function renderGroup(title, list) {
+  if (list.length === 0) return;
+  storesEl.append(el("h3", "group-title", title));
+  const group = el("div", "group-list");
+  for (const store of list) group.append(createRow(store));
+  storesEl.append(group);
 }
 
 function render() {
@@ -181,7 +236,8 @@ function render() {
   if (visible.length === 0) {
     storesEl.append(el("p", "message", "Nič sa nenašlo."));
   } else {
-    for (const store of visible) storesEl.append(createCard(store));
+    renderGroup("Odporúčané", visible.filter((s) => s.pinned));
+    renderGroup("Ďalšie obchody", visible.filter((s) => !s.pinned));
   }
 
   countEl.textContent = `Zobrazené: ${visible.length} z ${stores.length}`;
@@ -193,11 +249,16 @@ function renderFilters() {
   const keys = Object.keys(CATEGORIES).filter((k) => used.has(k));
 
   filtersEl.replaceChildren();
-  for (const key of [ALL, ...keys]) {
+  const womenCount = stores.filter((s) => s.women).length;
+  const all = womenCount > 0 ? [ALL, ...keys, WOMEN] : [ALL, ...keys];
+
+  for (const key of all) {
     const button = el("button", "chip");
     button.type = "button";
     if (key === ALL) {
       button.textContent = "Všetko";
+    } else if (key === WOMEN) {
+      button.textContent = `♀ Pre ženy (${womenCount})`;
     } else {
       const count = stores.filter((s) => s.categories.includes(key)).length;
       button.append(icon(key), el("span", "", `${CATEGORIES[key].label} (${count})`));
@@ -217,9 +278,13 @@ async function init() {
     const response = await fetch("stores.json");
     if (!response.ok) throw new Error("HTTP " + response.status);
     stores = await response.json();
-    // Zaheslované obchody na koniec, ostatné podľa veľkosti katalógu
+    // Pripnuté ostávajú v poradí zo stores.json; ostatné podľa veľkosti,
+    // zaheslované bez známeho hesla na koniec
+    const group = (s) => (s.pinned ? 0 : s.locked && !s.password ? 2 : 1);
     stores.sort(
-      (a, b) => Number(!!a.locked) - Number(!!b.locked) || (b.albums || 0) - (a.albums || 0)
+      (a, b) =>
+        group(a) - group(b) ||
+        (group(a) === 1 ? (b.albums || 0) - (a.albums || 0) : 0)
     );
   } catch (error) {
     storesEl.append(

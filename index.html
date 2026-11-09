@@ -8,27 +8,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <h1>Reps zoznam</h1>
-    <p class="subtitle">Yupoo obchody na jednom mieste. Hľadaj podľa obchodu, kategórie alebo značky.</p>
+  <div class="page">
+    <header class="header">
+      <h1>Reps zoznam</h1>
+      <p class="subtitle">Yupoo obchody na jednom mieste. Hľadaj podľa obchodu, typu oblečenia alebo značky.</p>
 
-    <input
-      id="search"
-      class="search"
-      type="search"
-      placeholder="Hľadaj… napr. mikiny, Nike, Peng"
-      autocomplete="off"
-    >
+      <input
+        id="search"
+        class="search"
+        type="search"
+        placeholder="Hľadaj… napr. mikiny, Nike, Peng"
+        autocomplete="off"
+      >
 
-    <div id="filters" class="filters" aria-label="Filtrovať podľa kategórie"></div>
-    <p id="count" class="count"></p>
-  </header>
+      <div id="filters" class="filters" aria-label="Filtrovať podľa typu oblečenia"></div>
+      <p id="count" class="count"></p>
+    </header>
 
-  <main id="stores" class="grid"></main>
+    <main id="stores" class="list"></main>
 
-  <footer class="footer">
-    <p>Obchod pridáš úpravou súboru <code>stores.json</code> v repozitári.</p>
-  </footer>
+    <footer class="footer">
+      <p>Obchod pridáš úpravou súboru <code>stores.json</code> v repozitári.</p>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>

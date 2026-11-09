@@ -1,5 +1,63 @@
 [
   {
+    "name": "YOLO66",
+    "url": "https://yolo66.x.yupoo.com/",
+    "albums": 20426,
+    "categories": [
+      "topanky",
+      "bundy",
+      "ciapky"
+    ],
+    "brands": [
+      "Nike",
+      "Jordan",
+      "Adidas",
+      "New Balance",
+      "Asics",
+      "On",
+      "Hoka",
+      "Salomon",
+      "Balenciaga",
+      "Onitsuka Tiger",
+      "Yeezy",
+      "UGG",
+      "Timberland",
+      "MM6",
+      "Louis Vuitton",
+      "Gucci",
+      "Arc'teryx"
+    ],
+    "sections": [
+      {
+        "label": "Oblečenie",
+        "url": "https://yolo66.x.yupoo.com/categories/943469"
+      },
+      {
+        "label": "Arc'teryx",
+        "url": "https://yolo66.x.yupoo.com/categories/4556624"
+      },
+      {
+        "label": "Jordan",
+        "url": "https://yolo66.x.yupoo.com/categories/4642719"
+      },
+      {
+        "label": "Air Force 1",
+        "url": "https://yolo66.x.yupoo.com/categories/4602182"
+      },
+      {
+        "label": "Dunk",
+        "url": "https://yolo66.x.yupoo.com/categories/4512906"
+      },
+      {
+        "label": "New Balance",
+        "url": "https://yolo66.x.yupoo.com/categories/4661556"
+      }
+    ],
+    "note": "Hlavne topánky. Oblečenie má v samostatnej sekcii.",
+    "locked": false,
+    "pinned": true
+  },
+  {
     "name": "Peng Reps",
     "url": "https://pengreps.x.yupoo.com/",
     "albums": 810,
@@ -12,6 +70,7 @@
       "ciapky"
     ],
     "brands": [
+      "Blanks",
       "Mertra",
       "Shinzo",
       "Depu",
@@ -21,7 +80,6 @@
       "Ultra",
       "Nep",
       "UVU",
-      "Blank",
       "Davr",
       "99Based",
       "Mutimer",
@@ -29,8 +87,9 @@
       "Protect LDN"
     ],
     "sections": [],
-    "note": "Menšie streetwear značky. Nový katalóg je Peng Reps 2.",
-    "locked": false
+    "note": "Blanks – čisté kúsky bez loga a potlače (mikiny, tričká, tepláky). K tomu menšie streetwear značky. Nový katalóg je Peng Reps 2.",
+    "locked": false,
+    "pinned": true
   },
   {
     "name": "Peng Reps 2",
@@ -54,7 +113,66 @@
     ],
     "sections": [],
     "note": "Nový katalóg od Peng Reps.",
-    "locked": false
+    "locked": false,
+    "pinned": true
+  },
+  {
+    "name": "Dragon Rep (No Ghost)",
+    "url": "https://noghost.x.yupoo.com/albums",
+    "albums": 693,
+    "categories": [
+      "mikiny",
+      "nohavice",
+      "tricka",
+      "sortky",
+      "bundy",
+      "topanky",
+      "doplnky"
+    ],
+    "brands": [
+      "Supreme",
+      "Palace",
+      "VRRCOK",
+      "ALVÉ",
+      "Mobius",
+      "SOLVA",
+      "Dragon Union",
+      "Fyredwrld",
+      "Etheria"
+    ],
+    "sections": [
+      {
+        "label": "Mikiny a nohavice",
+        "url": "https://noghost.x.yupoo.com/categories/5377956"
+      },
+      {
+        "label": "Tričká a šortky",
+        "url": "https://noghost.x.yupoo.com/categories/5136951"
+      },
+      {
+        "label": "Džínsy",
+        "url": "https://noghost.x.yupoo.com/categories/5377952"
+      },
+      {
+        "label": "Svetre",
+        "url": "https://noghost.x.yupoo.com/categories/5377945"
+      },
+      {
+        "label": "Bundy",
+        "url": "https://noghost.x.yupoo.com/categories/5377962"
+      },
+      {
+        "label": "Topánky",
+        "url": "https://noghost.x.yupoo.com/categories/4737654"
+      },
+      {
+        "label": "Doplnky",
+        "url": "https://noghost.x.yupoo.com/categories/5382987"
+      }
+    ],
+    "note": "",
+    "locked": false,
+    "pinned": true
   },
   {
     "name": "Cola Reps",
@@ -145,9 +263,27 @@
       "Dior",
       "Miu Miu"
     ],
-    "sections": [],
+    "sections": [
+      {
+        "label": "Dámske Lululemon",
+        "url": "https://supermanstore.x.yupoo.com/categories/5133126"
+      },
+      {
+        "label": "Dámske Miu Miu",
+        "url": "https://supermanstore.x.yupoo.com/categories/5123303"
+      },
+      {
+        "label": "Dámske Dior",
+        "url": "https://supermanstore.x.yupoo.com/categories/5123302"
+      },
+      {
+        "label": "Ralph Lauren (aj dámske)",
+        "url": "https://supermanstore.x.yupoo.com/categories/5038500"
+      }
+    ],
     "note": "Silný na páperové bundy a Timberland topánky.",
-    "locked": false
+    "locked": false,
+    "women": "Dámske Lululemon (legíny, mikiny), Miu Miu, Dior a Ralph Lauren (svetre, polo, šaty, sukne)."
   },
   {
     "name": "Fire Rep",
@@ -325,10 +461,27 @@
       {
         "label": "Šľapky",
         "url": "https://deateath.x.yupoo.com/categories/4646742"
+      },
+      {
+        "label": "Dámske",
+        "url": "https://deateath.x.yupoo.com/categories/4650505"
+      },
+      {
+        "label": "Krátke sukne",
+        "url": "https://deateath.x.yupoo.com/categories/4684000"
+      },
+      {
+        "label": "Dlhé sukne",
+        "url": "https://deateath.x.yupoo.com/categories/4830781"
+      },
+      {
+        "label": "Lululemon",
+        "url": "https://deateath.x.yupoo.com/categories/4642552"
       }
     ],
     "note": "Najväčší katalóg v zozname, 300+ značiek. Má aj sekcie podľa typu oblečenia.",
-    "locked": false
+    "locked": false,
+    "women": "Samostatná dámska sekcia, krátke aj dlhé sukne a Lululemon."
   },
   {
     "name": "MVT Shop",
@@ -404,22 +557,112 @@
   {
     "name": "Cupid Reps",
     "url": "https://cupidreps.x.yupoo.com/categories",
-    "albums": null,
-    "categories": [],
-    "brands": [],
-    "sections": [],
-    "note": "Katalóg je zaheslovaný. Heslo treba zistiť od sellera.",
-    "locked": true
+    "albums": 48,
+    "categories": [
+      "tricka",
+      "mikiny",
+      "bundy",
+      "nohavice",
+      "sortky"
+    ],
+    "brands": [
+      "Alo Yoga"
+    ],
+    "sections": [
+      {
+        "label": "Tričká a tielka",
+        "url": "https://cupidreps.x.yupoo.com/categories/987035"
+      },
+      {
+        "label": "Mikiny a svetre",
+        "url": "https://cupidreps.x.yupoo.com/categories/987039"
+      },
+      {
+        "label": "Bundy",
+        "url": "https://cupidreps.x.yupoo.com/categories/987033"
+      },
+      {
+        "label": "Páperové bundy",
+        "url": "https://cupidreps.x.yupoo.com/categories/987043"
+      },
+      {
+        "label": "Nohavice",
+        "url": "https://cupidreps.x.yupoo.com/categories/987038"
+      },
+      {
+        "label": "Šortky",
+        "url": "https://cupidreps.x.yupoo.com/categories/987031"
+      },
+      {
+        "label": "Sukne",
+        "url": "https://cupidreps.x.yupoo.com/categories/987037"
+      },
+      {
+        "label": "Sety",
+        "url": "https://cupidreps.x.yupoo.com/categories/987046"
+      },
+      {
+        "label": "Alo Yoga",
+        "url": "https://cupidreps.x.yupoo.com/categories/5317641"
+      }
+    ],
+    "note": "Dámsky obchod. Katalóg je zaheslovaný, heslo je nižšie.",
+    "locked": true,
+    "password": "cupid000",
+    "women": "Celý obchod je dámsky: sukne, sety, topy, legíny, bundy, Alo Yoga."
   },
   {
     "name": "GZ Made",
     "url": "https://gzmade.x.yupoo.com/",
-    "albums": null,
-    "categories": [],
-    "brands": [],
-    "sections": [],
-    "note": "Katalóg je zaheslovaný. Heslo treba zistiť od sellera.",
-    "locked": true
+    "albums": 203,
+    "categories": [
+      "tricka",
+      "mikiny",
+      "bundy",
+      "nohavice",
+      "sortky",
+      "topanky",
+      "tasky"
+    ],
+    "brands": [
+      "Lululemon",
+      "Alo Yoga",
+      "Loro Piana",
+      "Ralph Lauren",
+      "Burberry",
+      "Miu Miu",
+      "Acne Studios",
+      "Canada Goose",
+      "Moncler",
+      "Loewe",
+      "Prada",
+      "Arc'teryx",
+      "On Running",
+      "Goyard",
+      "Golden Goose"
+    ],
+    "sections": [
+      {
+        "label": "Lululemon",
+        "url": "https://gzmade.x.yupoo.com/categories/5042084"
+      },
+      {
+        "label": "Alo Yoga",
+        "url": "https://gzmade.x.yupoo.com/categories/5042085"
+      },
+      {
+        "label": "Moncler",
+        "url": "https://gzmade.x.yupoo.com/categories/5056150"
+      },
+      {
+        "label": "Canada Goose",
+        "url": "https://gzmade.x.yupoo.com/categories/5056169"
+      }
+    ],
+    "note": "Hlavne dámske športové oblečenie (Lululemon, Alo) a luxusné značky. Katalóg je zaheslovaný, heslo je nižšie.",
+    "locked": true,
+    "password": "gzmadefr",
+    "women": "Dámske športové oblečenie Lululemon a Alo Yoga (legíny, topy, mikiny), k tomu Miu Miu."
   },
   {
     "name": "Tianlai 5070",
@@ -448,63 +691,6 @@
     ],
     "sections": [],
     "note": "",
-    "locked": false
-  },
-  {
-    "name": "YOLO66",
-    "url": "https://yolo66.x.yupoo.com/",
-    "albums": 20426,
-    "categories": [
-      "topanky",
-      "bundy",
-      "ciapky"
-    ],
-    "brands": [
-      "Nike",
-      "Jordan",
-      "Adidas",
-      "New Balance",
-      "Asics",
-      "On",
-      "Hoka",
-      "Salomon",
-      "Balenciaga",
-      "Onitsuka Tiger",
-      "Yeezy",
-      "UGG",
-      "Timberland",
-      "MM6",
-      "Louis Vuitton",
-      "Gucci",
-      "Arc'teryx"
-    ],
-    "sections": [
-      {
-        "label": "Oblečenie",
-        "url": "https://yolo66.x.yupoo.com/categories/943469"
-      },
-      {
-        "label": "Arc'teryx",
-        "url": "https://yolo66.x.yupoo.com/categories/4556624"
-      },
-      {
-        "label": "Jordan",
-        "url": "https://yolo66.x.yupoo.com/categories/4642719"
-      },
-      {
-        "label": "Air Force 1",
-        "url": "https://yolo66.x.yupoo.com/categories/4602182"
-      },
-      {
-        "label": "Dunk",
-        "url": "https://yolo66.x.yupoo.com/categories/4512906"
-      },
-      {
-        "label": "New Balance",
-        "url": "https://yolo66.x.yupoo.com/categories/4661556"
-      }
-    ],
-    "note": "Hlavne topánky. Oblečenie má v samostatnej sekcii.",
     "locked": false
   },
   {
@@ -581,67 +767,19 @@
       {
         "label": "Ponožky",
         "url": "https://victoria-reps.x.yupoo.com/categories/4960584"
+      },
+      {
+        "label": "Dámske",
+        "url": "https://victoria-reps.x.yupoo.com/categories/755535"
+      },
+      {
+        "label": "Lululemon",
+        "url": "https://victoria-reps.x.yupoo.com/categories/4909697"
       }
     ],
     "note": "Veľký multibrand, má aj sekcie podľa typu.",
-    "locked": false
-  },
-  {
-    "name": "Dragon Rep (No Ghost)",
-    "url": "https://noghost.x.yupoo.com/albums",
-    "albums": 693,
-    "categories": [
-      "mikiny",
-      "nohavice",
-      "tricka",
-      "sortky",
-      "bundy",
-      "topanky",
-      "doplnky"
-    ],
-    "brands": [
-      "Supreme",
-      "Palace",
-      "VRRCOK",
-      "ALVÉ",
-      "Mobius",
-      "SOLVA",
-      "Dragon Union",
-      "Fyredwrld",
-      "Etheria"
-    ],
-    "sections": [
-      {
-        "label": "Mikiny a nohavice",
-        "url": "https://noghost.x.yupoo.com/categories/5377956"
-      },
-      {
-        "label": "Tričká a šortky",
-        "url": "https://noghost.x.yupoo.com/categories/5136951"
-      },
-      {
-        "label": "Džínsy",
-        "url": "https://noghost.x.yupoo.com/categories/5377952"
-      },
-      {
-        "label": "Svetre",
-        "url": "https://noghost.x.yupoo.com/categories/5377945"
-      },
-      {
-        "label": "Bundy",
-        "url": "https://noghost.x.yupoo.com/categories/5377962"
-      },
-      {
-        "label": "Topánky",
-        "url": "https://noghost.x.yupoo.com/categories/4737654"
-      },
-      {
-        "label": "Doplnky",
-        "url": "https://noghost.x.yupoo.com/categories/5382987"
-      }
-    ],
-    "note": "",
-    "locked": false
+    "locked": false,
+    "women": "Samostatná dámska sekcia a Lululemon."
   },
   {
     "name": "666 Factory",
@@ -689,10 +827,19 @@
       {
         "label": "Polo tričká",
         "url": "https://666factory.x.yupoo.com/categories/4476165"
+      },
+      {
+        "label": "Miu Miu",
+        "url": "https://666factory.x.yupoo.com/categories/4017648"
+      },
+      {
+        "label": "Chanel",
+        "url": "https://666factory.x.yupoo.com/categories/4105422"
       }
     ],
     "note": "Luxusné značky, hlavne bundy a svetre.",
-    "locked": false
+    "locked": false,
+    "women": "Miu Miu a Chanel – prevažne dámske kúsky."
   },
   {
     "name": "Artie Master",
@@ -733,10 +880,15 @@
       {
         "label": "Šiltovky",
         "url": "https://artiemaster.x.yupoo.com/categories/5142871"
+      },
+      {
+        "label": "Dámske",
+        "url": "https://artiemaster.x.yupoo.com/categories/5095298"
       }
     ],
-    "note": "Vlastná značka bez log, basic streetwear a tepláky. Aj dámske.",
-    "locked": false
+    "note": "Vlastná značka bez log, basic streetwear a tepláky.",
+    "locked": false,
+    "women": "Dámska sekcia: crop topy, tepláky, sety."
   },
   {
     "name": "Tang Reps",
@@ -831,7 +983,8 @@
       }
     ],
     "note": "Silný na páperové bundy a topánky.",
-    "locked": false
+    "locked": false,
+    "women": "Dámske Lululemon: legíny, mikiny na zips, páperové bundy."
   },
   {
     "name": "LOL2021",
