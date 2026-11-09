@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reps zoznam</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Reps zoznam</h1>
+    <p class="subtitle">Yupoo obchody na jednom mieste. Hľadaj podľa obchodu, kategórie alebo značky.</p>
+
+    <input
+      id="search"
+      class="search"
+      type="search"
+      placeholder="Hľadaj… napr. mikiny, Nike, Peng"
+      autocomplete="off"
+    >
+
+    <div id="filters" class="filters" aria-label="Filtrovať podľa kategórie"></div>
+    <p id="count" class="count"></p>
+  </header>
+
+  <main id="stores" class="grid"></main>
+
+  <footer class="footer">
+    <p>Obchod pridáš úpravou súboru <code>stores.json</code> v repozitári.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
