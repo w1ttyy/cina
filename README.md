@@ -1,4 +1,5 @@
 # Reps zoznam
+   **👉 Stránka: https://w1ttyy.github.io/cina/**
 
 Zoznam Yupoo obchodov s oblečením. Stránka beží na GitHub Pages a všetky dáta sú v súbore [`stores.json`](stores.json).
 
