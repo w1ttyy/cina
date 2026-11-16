@@ -46,6 +46,24 @@ const storesEl = document.querySelector("#stores");
 const filtersEl = document.querySelector("#filters");
 const searchEl = document.querySelector("#search");
 const countEl = document.querySelector("#count");
+const redditLinkEl = document.querySelector("#reddit-link");
+
+const REDDIT_URL = "https://www.reddit.com/r/FashionReps/";
+
+// Odkaz na Reddit: bez textu vedie na subreddit, s textom rovno vyhľadá v r/FashionReps
+function redditSearchUrl(query) {
+  if (!query) return REDDIT_URL;
+  // encodeURIComponent: medzery, diakritika a & sa v URL musia zakódovať
+  return `${REDDIT_URL}search/?q=${encodeURIComponent(query)}&restrict_sr=1`;
+}
+
+function updateRedditLink() {
+  const query = searchEl.value.trim();
+  redditLinkEl.href = redditSearchUrl(query);
+  redditLinkEl.textContent = query
+    ? `Hľadať „${query}“ na Reddite ↗`
+    : "Otvoriť r/FashionReps ↗";
+}
 
 let stores = [];
 let activeCategory = ALL;
@@ -121,6 +139,7 @@ function createBrands(store) {
       activeCategory = ALL;
       renderFilters();
       render();
+      updateRedditLink();
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
     wrap.append(chip);
@@ -234,7 +253,12 @@ function render() {
 
   storesEl.replaceChildren();
   if (visible.length === 0) {
-    storesEl.append(el("p", "message", "Nič sa nenašlo."));
+    const message = el("p", "message", "Nič sa nenašlo v zozname. ");
+    const query = searchEl.value.trim();
+    if (query) {
+      message.append(createLink(redditSearchUrl(query), `Skús „${query}“ na r/FashionReps ↗`));
+    }
+    storesEl.append(message);
   } else {
     renderGroup("Odporúčané", visible.filter((s) => s.pinned));
     renderGroup("Ďalšie obchody", visible.filter((s) => !s.pinned));
@@ -297,7 +321,10 @@ async function init() {
 
   renderFilters();
   render();
-  searchEl.addEventListener("input", render);
+  searchEl.addEventListener("input", () => {
+    render();
+    updateRedditLink();
+  });
 }
 
 init();

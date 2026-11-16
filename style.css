@@ -416,3 +416,75 @@ code {
     padding: 0.75rem 1rem;
   }
 }
+
+/* ---------- Tip na Reddit ---------- */
+.tip {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 0 0 1rem;
+  padding: 0.85rem 1rem;
+  background: linear-gradient(135deg, rgba(170, 185, 207, 0.12), rgba(170, 185, 207, 0.04));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.tip-badge {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  font-weight: 800;
+  color: var(--bg);
+  background: var(--powder);
+  border-radius: 50%;
+}
+
+.tip-text {
+  flex: 1;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.tip-text strong {
+  color: var(--text);
+}
+
+.tip-btn {
+  flex-shrink: 0;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--sky);
+  border: 1px solid var(--powder);
+  border-radius: 10px;
+}
+
+.tip-btn:hover {
+  color: var(--bg);
+  background: var(--sky);
+}
+
+.message a {
+  color: var(--sky);
+}
+
+@media (max-width: 760px) {
+  .tip {
+    flex-wrap: wrap;
+  }
+
+  .tip-text {
+    flex-basis: calc(100% - 3.5rem);
+  }
+
+  .tip-btn {
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+  }
+}
